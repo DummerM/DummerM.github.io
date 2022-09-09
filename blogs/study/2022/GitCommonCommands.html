@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git 常用指令 | 心方方</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/avatar.png">
+    <meta name="description" content="心方方的秘密花园">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="keywords" content="心方方，前端笔记，在线撸猫，心方方的秘密花园">
+    <meta name="baidu-site-verification" content="code-SpVJYVjLyl">
+    
+    <link rel="preload" href="/assets/css/0.styles.80832232.css" as="style"><link rel="preload" href="/assets/js/app.3dae3d74.js" as="script"><link rel="preload" href="/assets/js/3.f88c7630.js" as="script"><link rel="preload" href="/assets/js/1.77c4ea6a.js" as="script"><link rel="preload" href="/assets/js/15.8f8a0500.js" as="script"><link rel="prefetch" href="/assets/js/10.ed981be4.js"><link rel="prefetch" href="/assets/js/11.6c749f99.js"><link rel="prefetch" href="/assets/js/12.9277c6c6.js"><link rel="prefetch" href="/assets/js/13.3bff2be5.js"><link rel="prefetch" href="/assets/js/14.e89ea853.js"><link rel="prefetch" href="/assets/js/16.169fbcba.js"><link rel="prefetch" href="/assets/js/17.c0747a8e.js"><link rel="prefetch" href="/assets/js/18.300691c1.js"><link rel="prefetch" href="/assets/js/19.d6e34306.js"><link rel="prefetch" href="/assets/js/20.b2fd744b.js"><link rel="prefetch" href="/assets/js/21.0dd4cad0.js"><link rel="prefetch" href="/assets/js/22.8a9d4d68.js"><link rel="prefetch" href="/assets/js/4.47d2bb25.js"><link rel="prefetch" href="/assets/js/5.6a846ed5.js"><link rel="prefetch" href="/assets/js/6.2ffc91bb.js"><link rel="prefetch" href="/assets/js/7.1129c89c.js"><link rel="prefetch" href="/assets/js/8.8aea0e43.js"><link rel="prefetch" href="/assets/js/9.5359e180.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.80832232.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1aefc0b4><div data-v-1aefc0b4><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1aefc0b4 data-v-1aefc0b4><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>心方方</h3> <p class="description" data-v-25ba6db2 data-v-25ba6db2>心方方的秘密花园</p> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><span data-v-25ba6db2>xinfangfang</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div class="hide" data-v-1aefc0b4><header class="navbar" data-v-1aefc0b4><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/avatar.png" alt="心方方" class="logo"> <span class="site-name">心方方</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      类别
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系方式
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/DummerM/DummerM.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1aefc0b4></div> <aside class="sidebar" data-v-1aefc0b4><div class="personal-info-wrapper" data-v-39576ba9 data-v-1aefc0b4><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-39576ba9> <h3 class="name" data-v-39576ba9>
+    xinfangfang
+  </h3> <div class="num" data-v-39576ba9><div data-v-39576ba9><h3 data-v-39576ba9>12</h3> <h6 data-v-39576ba9>文章</h6></div> <div data-v-39576ba9><h3 data-v-39576ba9>6</h3> <h6 data-v-39576ba9>标签</h6></div></div> <ul class="social-links" data-v-39576ba9></ul> <hr data-v-39576ba9></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      类别
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系方式
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/DummerM/DummerM.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>Git 常用指令</h3> <!----> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><span data-v-25ba6db2>xinfangfang</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div data-v-1aefc0b4><main class="page"><section><div class="page-title"><h1 class="title">Git 常用指令</h1> <div data-v-f875f3fc><i class="iconfont reco-account" data-v-f875f3fc><span data-v-f875f3fc>xinfangfang</span></i> <i class="iconfont reco-date" data-v-f875f3fc><span data-v-f875f3fc>2022/6/28</span></i> <i class="iconfont reco-eye" data-v-f875f3fc><span id="/blogs/study/2022/GitCommonCommands.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-f875f3fc><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="tags iconfont reco-tag" data-v-f875f3fc><span class="tag-item" data-v-f875f3fc>git</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="本地仓库"><a href="#本地仓库" class="header-anchor">#</a> 本地仓库</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>git init # 初始化本地git 以下所有操作的前提条件
+
+git add -A # 添加当前所有变动文件到本地缓存区
+git commit -m '&lt;commit-word&gt;' # 提交缓存区内容到本地仓库
+git commit -am '&lt;commit-word&gt;' # 上面两步合并为一步的命令
+
+git checkout master
+git checkout -b &lt;feat-name&gt; # 新建feat-name分支并切换到该分支
+
+git branch -a # 列出所有本地分支和远程分支
+git branch -D &lt;feat-name&gt; # 删除本地feat-name分支
+
+git status # 显示当前分支状态
+git reset --hard # 回滚到最近的commit
+git config --list # 显示当前的Git配置
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h2 id="远程仓库"><a href="#远程仓库" class="header-anchor">#</a> 远程仓库</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>git remote add origin &lt;URL&gt; # 关联远程仓库，以下操作的前提条件
+git remote -v # 显示远程仓库
+git branch -vv  # 查看本地分支与远程分支对应关系
+
+git pull # 拉取远程代码到本地
+git push -u origin master # 推送本地到远程master分支
+git push origin :branch-name # 删除远程分支 # 等同于 git push origin --delete [branch-name]
+
+git merge feat-name # feat-name分支内容合并到当前分支，适合不同分支间commit合并操作
+git checkout -b devbranch origin/devbranch  # 创建分支并切换分支，同时对应到远程分支
+
+git pull或者git fetch origin可以拉取所有远程分支
+使用git pull origin devbranch命令可以拉取单远程分支
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h2 id="高级"><a href="#高级" class="header-anchor">#</a> 高级</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code># 变基。
+# 记住，rebase操作永远不在公共分支操作；同时rebase与公共分支名永远不同时出现
+# 场景1:减少同一分支提交记录
+# 交互式合并当前分支最近三次的记录，用于简化提交记录。
+# 注意：不要合并先前提交的东西，也就是已经提交远程分支的纪录。
+git rebase -i HEAD~3
+
+# 场景2: 把feat-A变得基于feat-B
+# # 把当前A分支的提交commit，变基到A和B分支共同祖先的commit上，然后加上B分支后续的commit。
+git reabse feat-B
+
+# 子模块
+git submodule add https://github.com/djyde/ToProgress # 添加子模块
+git submodule status # 检查子模块状态
+git submodule update ToProgress # 更新子模块
+git submodule deinit ToProgress &amp;&amp; git rm ToPogress # 删除子模块
+
+# Tag
+git tag # 查看tag
+git tag -a &lt;tag-name&gt; -m &lt;comment&gt; # 新建tag
+git push origin --tags # 推送tag
+    
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h2 id="常用"><a href="#常用" class="header-anchor">#</a> 常用</h2> <h3 id="部署gh-pages"><a href="#部署gh-pages" class="header-anchor">#</a> 部署gh-pages</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 部署gh-pages主页(一直在master分支上执行)
+
+# 1. 把dist分支上传到master分支
+npm run build &amp;&amp; git commit -am 'deploy'
+# 2. 意思是把远程master（注意不是本地master）分支的dist文件夹，
+# 推送到远程的gh-pages分支。
+git subtree push --prefix dist origin gh-pages
+    
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>可以设置deploy命令：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&quot;deploy&quot;: &quot;npm run build &amp;&amp; git commit -am 'deploy' &amp;&amp; git subtree push --prefix dist origin gh-pages&quot;,
+    
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>::tip
+以上是使用原生git命令，实际项目中更推荐<a href="https://lq782655835.github.io/blogs/tools/git-command.html" target="_blank" rel="nofollow noopener noreferrer">gh-pages<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>这样的工具包。
+:::</p> <h3 id="fork仓库同步代码"><a href="#fork仓库同步代码" class="header-anchor">#</a> fork仓库同步代码</h3> <p>将源项目代码同步到Fork出来的个人项目上</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>#拉取Fork出来的分支
+git clone Fork的分支url
+
+#注意：进入项目根目录，执行下面操作
+
+#查看所有远程库(remote repo)的远程url
+git remote -v
+
+#添加源分支url
+git remote add upstream 替换成源项目url
+
+#查看所有远程库(remote repo)的远程url
+git remote -v
+
+#从源分支获取最新的代码
+git fetch upstream
+
+#切换到主分支
+git checkout master
+
+#合并本地分支和源分支,本地库和远程的github原仓库同步
+git merge upstream/master
+
+#push到fork分支,本地的仓库提交到github
+git push origin master
+    
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h3 id="git-emoji"><a href="#git-emoji" class="header-anchor">#</a> git emoji</h3> <p>执行 git commit 时使用 emoji 为本次提交打上一个 &quot;标签&quot;, 使得此次 commit 的主要工作得以凸现，也能够使得其在整个提交历史中易于区分与查找。</p> <table><thead><tr><th>emoji</th> <th>emoji 代码</th> <th>commit 说明</th></tr></thead> <tbody><tr><td>🎉 (庆祝)</td> <td><code>:tada:</code></td> <td>初次提交</td></tr> <tr><td>✨ (火花)</td> <td><code>:sparkles:</code></td> <td>引入新功能</td></tr> <tr><td>🔖 (书签)</td> <td><code>:bookmark:</code></td> <td>发行/版本标签</td></tr> <tr><td>🐛 (bug)</td> <td><code>:bug:</code></td> <td>修复 bug</td></tr> <tr><td>🚑 (急救车)</td> <td><code>:ambulance:</code></td> <td>重要补丁</td></tr> <tr><td>🌐 (地球)</td> <td><code>:globe_with_meridians:</code></td> <td>国际化与本地化</td></tr> <tr><td>💄 (口红)</td> <td><code>:lipstick:</code></td> <td>更新 UI 和样式文件</td></tr> <tr><td>🎬 (场记板)</td> <td><code>:clapper:</code></td> <td>更新演示/示例</td></tr> <tr><td>🚨 (警车灯)</td> <td><code>:rotating_light:</code></td> <td>移除 linter 警告</td></tr> <tr><td>🔧 (扳手)</td> <td><code>:wrench:</code></td> <td>修改配置文件</td></tr> <tr><td>➕ (加号)</td> <td><code>:heavy_plus_sign:</code></td> <td>增加一个依赖</td></tr> <tr><td>➖ (减号)</td> <td><code>:heavy_minus_sign:</code></td> <td>减少一个依赖</td></tr> <tr><td>⬆️ (上升箭头)</td> <td><code>:arrow_up:</code></td> <td>升级依赖</td></tr> <tr><td>⬇️ (下降箭头)</td> <td><code>:arrow_down:</code></td> <td>降级依赖</td></tr> <tr><td>⚡️ (闪电)🐎 (赛马)</td> <td><code>:zap:``:racehorse:</code></td> <td>提升性能</td></tr> <tr><td>📈 (上升趋势图)</td> <td><code>:chart_with_upwards_trend:</code></td> <td>添加分析或跟踪代码</td></tr> <tr><td>🚀 (火箭)</td> <td><code>:rocket:</code></td> <td>部署功能</td></tr> <tr><td>✅ (白色复选框)</td> <td><code>:white_check_mark:</code></td> <td>增加测试</td></tr> <tr><td>📝 (备忘录)</td> <td><code>:memo:</code></td> <td>撰写文档</td></tr> <tr><td>🔨 (锤子)</td> <td><code>:hammer:</code></td> <td>重大重构</td></tr> <tr><td>🎨 (调色板)</td> <td><code>:art:</code></td> <td>改进代码结构/代码格式</td></tr> <tr><td>🔥 (火焰)</td> <td><code>:fire:</code></td> <td>移除代码或文件</td></tr> <tr><td>✏️ (铅笔)</td> <td><code>:pencil2:</code></td> <td>修复 typo</td></tr> <tr><td>🚧 (施工)</td> <td><code>:construction:</code></td> <td>工作进行中</td></tr> <tr><td>👷 (工人)</td> <td><code>:construction_worker:</code></td> <td>添加 CI 构建系统</td></tr> <tr><td>💚 (绿心)</td> <td><code>:green_heart:</code></td> <td>修复 CI 构建问题</td></tr> <tr><td>🔒 (锁)</td> <td><code>:lock:</code></td> <td>修复安全问题</td></tr> <tr><td>🐳 (鲸鱼)</td> <td><code>:whale:</code></td> <td>Docker 相关工作</td></tr> <tr><td>🍎 (苹果)</td> <td><code>:apple:</code></td> <td>修复 macOS 下的问题</td></tr> <tr><td>🐧 (企鹅)</td> <td><code>:penguin:</code></td> <td>修复 Linux 下的问题</td></tr> <tr><td>🏁 (旗帜)</td> <td><code>:checked_flag:</code></td> <td>修复 Windows 下的问题</td></tr></tbody></table></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">2022/7/2 17:35:43</span></div></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-cb1513f6><li class="level-2" data-v-cb1513f6><a href="/blogs/study/2022/GitCommonCommands.html#本地仓库" class="sidebar-link reco-side-本地仓库" data-v-cb1513f6>本地仓库</a></li><li class="level-2" data-v-cb1513f6><a href="/blogs/study/2022/GitCommonCommands.html#远程仓库" class="sidebar-link reco-side-远程仓库" data-v-cb1513f6>远程仓库</a></li><li class="level-2" data-v-cb1513f6><a href="/blogs/study/2022/GitCommonCommands.html#高级" class="sidebar-link reco-side-高级" data-v-cb1513f6>高级</a></li><li class="level-2" data-v-cb1513f6><a href="/blogs/study/2022/GitCommonCommands.html#常用" class="sidebar-link reco-side-常用" data-v-cb1513f6>常用</a></li><li class="level-3" data-v-cb1513f6><a href="/blogs/study/2022/GitCommonCommands.html#部署gh-pages" class="sidebar-link reco-side-部署gh-pages" data-v-cb1513f6>部署gh-pages</a></li><li class="level-3" data-v-cb1513f6><a href="/blogs/study/2022/GitCommonCommands.html#fork仓库同步代码" class="sidebar-link reco-side-fork仓库同步代码" data-v-cb1513f6>fork仓库同步代码</a></li><li class="level-3" data-v-cb1513f6><a href="/blogs/study/2022/GitCommonCommands.html#git-emoji" class="sidebar-link reco-side-git-emoji" data-v-cb1513f6>git emoji</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div class="container" data-v-0178ff65><canvas id="live2d" width="280" height="250" class="live2d-right" data-v-0178ff65></canvas></div></div></div>
+    <script src="/assets/js/app.3dae3d74.js" defer></script><script src="/assets/js/3.f88c7630.js" defer></script><script src="/assets/js/1.77c4ea6a.js" defer></script><script src="/assets/js/15.8f8a0500.js" defer></script>
+  </body>
+</html>
