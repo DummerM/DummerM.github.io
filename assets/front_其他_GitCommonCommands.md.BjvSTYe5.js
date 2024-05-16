@@ -1,0 +1,77 @@
+import{_ as a,c as s,o as n,a3 as t}from"./chunks/framework.CkL4CRoQ.js";const u=JSON.parse('{"title":"Git 常用指令","description":"","frontmatter":{"title":"Git 常用指令","date":"2022-06-28T00:00:00.000Z","sidebar":"auto","tags":["git"],"categories":["前端"]},"headers":[],"relativePath":"front/其他/GitCommonCommands.md","filePath":"front/其他/GitCommonCommands.md","lastUpdated":1715845410000}'),p={name:"front/其他/GitCommonCommands.md"},e=t(`<h2 id="本地仓库" tabindex="-1">本地仓库 <a class="header-anchor" href="#本地仓库" aria-label="Permalink to &quot;本地仓库&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>git init # 初始化本地git 以下所有操作的前提条件</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>git add -A # 添加当前所有变动文件到本地缓存区</span></span>
+<span class="line"><span>git commit -m &#39;&lt;commit-word&gt;&#39; # 提交缓存区内容到本地仓库</span></span>
+<span class="line"><span>git commit -am &#39;&lt;commit-word&gt;&#39; # 上面两步合并为一步的命令</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>git checkout master</span></span>
+<span class="line"><span>git checkout -b &lt;feat-name&gt; # 新建feat-name分支并切换到该分支</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>git branch -a # 列出所有本地分支和远程分支</span></span>
+<span class="line"><span>git branch -D &lt;feat-name&gt; # 删除本地feat-name分支</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>git status # 显示当前分支状态</span></span>
+<span class="line"><span>git reset --hard # 回滚到最近的commit</span></span>
+<span class="line"><span>git config --list # 显示当前的Git配置</span></span></code></pre></div><h2 id="远程仓库" tabindex="-1">远程仓库 <a class="header-anchor" href="#远程仓库" aria-label="Permalink to &quot;远程仓库&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>git remote add origin &lt;URL&gt; # 关联远程仓库，以下操作的前提条件</span></span>
+<span class="line"><span>git remote -v # 显示远程仓库</span></span>
+<span class="line"><span>git branch -vv  # 查看本地分支与远程分支对应关系</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>git pull # 拉取远程代码到本地</span></span>
+<span class="line"><span>git push -u origin master # 推送本地到远程master分支</span></span>
+<span class="line"><span>git push origin :branch-name # 删除远程分支 # 等同于 git push origin --delete [branch-name]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>git merge feat-name # feat-name分支内容合并到当前分支，适合不同分支间commit合并操作</span></span>
+<span class="line"><span>git checkout -b devbranch origin/devbranch  # 创建分支并切换分支，同时对应到远程分支</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>git pull或者git fetch origin可以拉取所有远程分支</span></span>
+<span class="line"><span>使用git pull origin devbranch命令可以拉取单远程分支</span></span></code></pre></div><h2 id="高级" tabindex="-1">高级 <a class="header-anchor" href="#高级" aria-label="Permalink to &quot;高级&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span># 变基。</span></span>
+<span class="line"><span># 记住，rebase操作永远不在公共分支操作；同时rebase与公共分支名永远不同时出现</span></span>
+<span class="line"><span># 场景1:减少同一分支提交记录</span></span>
+<span class="line"><span># 交互式合并当前分支最近三次的记录，用于简化提交记录。</span></span>
+<span class="line"><span># 注意：不要合并先前提交的东西，也就是已经提交远程分支的纪录。</span></span>
+<span class="line"><span>git rebase -i HEAD~3</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 场景2: 把feat-A变得基于feat-B</span></span>
+<span class="line"><span># # 把当前A分支的提交commit，变基到A和B分支共同祖先的commit上，然后加上B分支后续的commit。</span></span>
+<span class="line"><span>git reabse feat-B</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 子模块</span></span>
+<span class="line"><span>git submodule add https://github.com/djyde/ToProgress # 添加子模块</span></span>
+<span class="line"><span>git submodule status # 检查子模块状态</span></span>
+<span class="line"><span>git submodule update ToProgress # 更新子模块</span></span>
+<span class="line"><span>git submodule deinit ToProgress &amp;&amp; git rm ToPogress # 删除子模块</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># Tag</span></span>
+<span class="line"><span>git tag # 查看tag</span></span>
+<span class="line"><span>git tag -a &lt;tag-name&gt; -m &lt;comment&gt; # 新建tag</span></span>
+<span class="line"><span>git push origin --tags # 推送tag</span></span></code></pre></div><h2 id="常用" tabindex="-1">常用 <a class="header-anchor" href="#常用" aria-label="Permalink to &quot;常用&quot;">​</a></h2><h3 id="部署gh-pages" tabindex="-1">部署gh-pages <a class="header-anchor" href="#部署gh-pages" aria-label="Permalink to &quot;部署gh-pages&quot;">​</a></h3><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>// 部署gh-pages主页(一直在master分支上执行)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 1. 把dist分支上传到master分支</span></span>
+<span class="line"><span>npm run build &amp;&amp; git commit -am &#39;deploy&#39;</span></span>
+<span class="line"><span># 2. 意思是把远程master（注意不是本地master）分支的dist文件夹，</span></span>
+<span class="line"><span># 推送到远程的gh-pages分支。</span></span>
+<span class="line"><span>git subtree push --prefix dist origin gh-pages</span></span></code></pre></div><p>可以设置deploy命令：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>&quot;deploy&quot;: &quot;npm run build &amp;&amp; git commit -am &#39;deploy&#39; &amp;&amp; git subtree push --prefix dist origin gh-pages&quot;,</span></span></code></pre></div><p>::tip 以上是使用原生git命令，实际项目中更推荐<a href="https://lq782655835.github.io/blogs/tools/git-command.html" target="_blank" rel="noreferrer">gh-pages</a>这样的工具包。 :::</p><h3 id="fork仓库同步代码" tabindex="-1">fork仓库同步代码 <a class="header-anchor" href="#fork仓库同步代码" aria-label="Permalink to &quot;fork仓库同步代码&quot;">​</a></h3><p>将源项目代码同步到Fork出来的个人项目上</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>#拉取Fork出来的分支</span></span>
+<span class="line"><span>git clone Fork的分支url</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#注意：进入项目根目录，执行下面操作</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#查看所有远程库(remote repo)的远程url</span></span>
+<span class="line"><span>git remote -v</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#添加源分支url</span></span>
+<span class="line"><span>git remote add upstream 替换成源项目url</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#查看所有远程库(remote repo)的远程url</span></span>
+<span class="line"><span>git remote -v</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#从源分支获取最新的代码</span></span>
+<span class="line"><span>git fetch upstream</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#切换到主分支</span></span>
+<span class="line"><span>git checkout master</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#合并本地分支和源分支,本地库和远程的github原仓库同步</span></span>
+<span class="line"><span>git merge upstream/master</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#push到fork分支,本地的仓库提交到github</span></span>
+<span class="line"><span>git push origin master</span></span></code></pre></div><h3 id="git-emoji" tabindex="-1">git emoji <a class="header-anchor" href="#git-emoji" aria-label="Permalink to &quot;git emoji&quot;">​</a></h3><p>执行 git commit 时使用 emoji 为本次提交打上一个 &quot;标签&quot;, 使得此次 commit 的主要工作得以凸现，也能够使得其在整个提交历史中易于区分与查找。</p><table><thead><tr><th>emoji</th><th>emoji 代码</th><th>commit 说明</th></tr></thead><tbody><tr><td>🎉 (庆祝)</td><td><code>:tada:</code></td><td>初次提交</td></tr><tr><td>✨ (火花)</td><td><code>:sparkles:</code></td><td>引入新功能</td></tr><tr><td>🔖 (书签)</td><td><code>:bookmark:</code></td><td>发行/版本标签</td></tr><tr><td>🐛 (bug)</td><td><code>:bug:</code></td><td>修复 bug</td></tr><tr><td>🚑 (急救车)</td><td><code>:ambulance:</code></td><td>重要补丁</td></tr><tr><td>🌐 (地球)</td><td><code>:globe_with_meridians:</code></td><td>国际化与本地化</td></tr><tr><td>💄 (口红)</td><td><code>:lipstick:</code></td><td>更新 UI 和样式文件</td></tr><tr><td>🎬 (场记板)</td><td><code>:clapper:</code></td><td>更新演示/示例</td></tr><tr><td>🚨 (警车灯)</td><td><code>:rotating_light:</code></td><td>移除 linter 警告</td></tr><tr><td>🔧 (扳手)</td><td><code>:wrench:</code></td><td>修改配置文件</td></tr><tr><td>➕ (加号)</td><td><code>:heavy_plus_sign:</code></td><td>增加一个依赖</td></tr><tr><td>➖ (减号)</td><td><code>:heavy_minus_sign:</code></td><td>减少一个依赖</td></tr><tr><td>⬆️ (上升箭头)</td><td><code>:arrow_up:</code></td><td>升级依赖</td></tr><tr><td>⬇️ (下降箭头)</td><td><code>:arrow_down:</code></td><td>降级依赖</td></tr><tr><td>⚡️ (闪电)🐎 (赛马)</td><td><code>:zap:\`\`:racehorse:</code></td><td>提升性能</td></tr><tr><td>📈 (上升趋势图)</td><td><code>:chart_with_upwards_trend:</code></td><td>添加分析或跟踪代码</td></tr><tr><td>🚀 (火箭)</td><td><code>:rocket:</code></td><td>部署功能</td></tr><tr><td>✅ (白色复选框)</td><td><code>:white_check_mark:</code></td><td>增加测试</td></tr><tr><td>📝 (备忘录)</td><td><code>:memo:</code></td><td>撰写文档</td></tr><tr><td>🔨 (锤子)</td><td><code>:hammer:</code></td><td>重大重构</td></tr><tr><td>🎨 (调色板)</td><td><code>:art:</code></td><td>改进代码结构/代码格式</td></tr><tr><td>🔥 (火焰)</td><td><code>:fire:</code></td><td>移除代码或文件</td></tr><tr><td>✏️ (铅笔)</td><td><code>:pencil2:</code></td><td>修复 typo</td></tr><tr><td>🚧 (施工)</td><td><code>:construction:</code></td><td>工作进行中</td></tr><tr><td>👷 (工人)</td><td><code>:construction_worker:</code></td><td>添加 CI 构建系统</td></tr><tr><td>💚 (绿心)</td><td><code>:green_heart:</code></td><td>修复 CI 构建问题</td></tr><tr><td>🔒 (锁)</td><td><code>:lock:</code></td><td>修复安全问题</td></tr><tr><td>🐳 (鲸鱼)</td><td><code>:whale:</code></td><td>Docker 相关工作</td></tr><tr><td>🍎 (苹果)</td><td><code>:apple:</code></td><td>修复 macOS 下的问题</td></tr><tr><td>🐧 (企鹅)</td><td><code>:penguin:</code></td><td>修复 Linux 下的问题</td></tr><tr><td>🏁 (旗帜)</td><td><code>:checked_flag:</code></td><td>修复 Windows 下的问题</td></tr></tbody></table>`,18),d=[e];function i(l,o,c,r,g,m){return n(),s("div",null,d)}const b=a(p,[["render",i]]);export{u as __pageData,b as default};
