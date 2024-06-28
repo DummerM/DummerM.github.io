@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./chunks/framework.eXQFfozO.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"front/js/index.md","filePath":"front/js/index.md","lastUpdated":1715845410000}'),n={name:"front/js/index.md"};function r(o,s,d,c,i,p){return a(),t("div")}const m=e(n,[["render",r]]);export{_ as __pageData,m as default};
